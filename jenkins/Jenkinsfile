@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/my-cicd-project.git'
+                git 'https://github.com/Manojgit45/Devops-project.git'
             }
         }
         stage('Build Docker Image') {
