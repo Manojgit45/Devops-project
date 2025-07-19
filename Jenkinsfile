@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        AWS_ACCESS_KEY_ID     = credentials('aws-access-key')
-        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-key')
+        AWS_ACCESS_KEY_ID     = credentials('AKIAT4GVRMT5CZQJA5X3')
+        AWS_SECRET_ACCESS_KEY = credentials('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')
     }
 
     stages {
         stage('Clone Repo') {
             steps {
-                git branch: 'main', url: 'https://github.com/your-org/aws-provisioning.git'
+                git branch: 'main', url: 'https://github.com/Manojgit45/Devops-project.git'
             }
         }
 
