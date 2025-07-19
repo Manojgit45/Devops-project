@@ -9,7 +9,8 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git branch: 'main', url: 'https://github.com/Manojgit45/Devops-project.git'
+                git credentialsId: 'github_token', branch: 'main', url: 'https://github.com/Manojgit45/Devops-project.git'
+
             }
         }
 
