@@ -1,0 +1,19 @@
+---
+- name: Launch EC2 instance
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: Launch EC2 instance
+      amazon.aws.ec2_instance:
+        name: "JenkinsEC2"
+        key_name: "manoj.pem"
+        instance_type: t2.micro
+        image_id: ami-0a5c3558529277641
+        wait: yes
+        count: 1
+        region: us-east-1
+        tags:
+          Environment: Jenkins
+
